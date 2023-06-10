@@ -515,5 +515,4 @@ GitHub.sublime-settings
 .history
 
 # Ignora todo __pycache__
-
 **/__pycache__/ 

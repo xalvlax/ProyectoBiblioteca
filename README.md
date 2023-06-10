@@ -37,7 +37,7 @@ listado de libros y autores, agregar o quitar socios a los cuales se les prestar
 (App encargada de la alta, baja, modificacion, listado y redireccionado a sus correspondientes Templates de los Autores)
 
 **Contenido**
-- **admin.py** ( Administrador)
+- **admin.py** ( Administrador )
     - Agregado modelo al administrador utilizando list_display ( campos: nombre, apellido, nacionalidad y activo )
     - list_filter ( campos: activo y nacionalidad )
     - search_field ( campos: nombre y apellido )
