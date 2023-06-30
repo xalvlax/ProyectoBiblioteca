@@ -6,7 +6,12 @@ from django import forms
 
 class LibroForm(ModelForm):
 		autor = forms.ModelChoiceField(queryset=Autor.objects.filter(activo=True))
-		isbn = forms.IntegerField(validators=[isbnValidator])
+		isbn = forms.CharField(validators=[isbnValidator])
 		class Meta:
 				model = Libro
 				fields = ["titulo","descripcion","isbn","autor"]
+				widgets = {
+					'titulo' : forms.TextInput(attrs={'class':'form-control','placeholder':'Ingrese el titulo'}),
+					'descripcion' : forms.Textarea(attrs={'class':'form-control','placeholder':'Ingrese una descripcion','rows':3}),
+					'isbn' : forms.NumberInput(attrs={'class':'form-control','placeholder':'Ingrese el ISBN'})
+				}
